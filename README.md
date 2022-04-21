@@ -1,9 +1,6 @@
-# UnityNativePlugin-macosx-arm64
-
-Unity Native PluginはiOSの場合にはソースコードをAssets/Plugins/iOSに入れますが、macOSなどの場合はビルド済みのライブラリ（macOSではbundle）をつくる必要があります。
-Editorで動かしたい場合などに必要となります。
-
-Xcodeでbundleのプロジェクトを新規作成します。
+Unity Native PluginはiOSの場合にはソースコードをAssets/Plugins/iOSに入れますが、    
+macOSなどの場合はビルド済みのライブラリ（macOSではbundle）をつくる必要があります。    
+Editorで動かしたい場合などに必要となるのでXcodeでbundleのプロジェクトを新規作成します。
 
 ![fig01](./fig01.png)
 
@@ -33,8 +30,8 @@ extern "C" void onDestroy() {
 }
 ```
 
-ビルドするとbundleができるのでAssets/Plugins/に置きます。
-GameObjectを作りBehaviourScriptをアタッチします。
+ビルドするとbundleができるのでAssets/Plugins/に置きます。    
+GameObjectを作りBehaviourScriptをアタッチします。    
 作成したbundle名がTest.bundleだった場合にDllImportされる名称はTestになりますので、任意の名前に変更してください。
 
 ```
@@ -64,5 +61,5 @@ public class NewBehaviourScript : MonoBehaviour
 }
 ```
 
-Editrで再生するとウィンドウが立ち上がります。
+Editrで再生するとウィンドウが立ち上がります。    
 停止するとウィンドウが消えます。
